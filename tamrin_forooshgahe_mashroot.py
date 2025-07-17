@@ -1,4 +1,4 @@
-amount=55000
+amount=int(input())
 if amount>50000:
     amount=int(amount-(amount*(20/100)))
     print(amount)
