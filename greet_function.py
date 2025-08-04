@@ -1,5 +1,6 @@
 def greet (Name):
     print(f"Hello, {Name}!")
 
-greet("Ali")   
-    
+answer=input("Name")
+
+greet(answer)   
