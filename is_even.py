@@ -6,6 +6,6 @@ def is_even(n):
 
 
 
-is_even(int(input()))
+print(is_even(int(input())))
 
         
