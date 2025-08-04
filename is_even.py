@@ -4,6 +4,8 @@ def is_even(n):
     else:
         return False
 
-print(is_even(int(input())))   
-    
+
+
+is_even(int(input()))
+
         
