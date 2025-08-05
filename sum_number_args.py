@@ -4,9 +4,7 @@ def sum_number(*args):
         res+=i
 
     return res
-    if args==0:
-        res=0
-        return res
+    
 
 
 user_input=input()
