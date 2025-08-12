@@ -1,34 +1,52 @@
 class Animal():
-    def __init__(self,name,species,age,sound,zoo_name):
+
+    zoo_name="Eram Zoo"
+
+    def __init__(self,name,species,age,sound):
         self.name=name
         self.species=species
         self.age=age
         self.sound=sound
-        self.zoo_name=zoo_name
+
     def make_sound(self):
-        return self.sound
+        return self.sound 
+
     def info(self):
-        return  shir.name,shir.species ,shir.age ,shir.sound, shir.zoo_name
+        return  self.name,self.species ,self.age ,self.sound, Animal.zoo_name
+
     def __str__(self):
-        r=print(f"{self.name},{self.species} ,{self.age },{self.sound}, {self.zoo_name}")  
-        return r
+        return f"{self.name},{self.species} ,{self.age },{self.sound}, {Animal.zoo_name}" 
+        
 
 class bird (Animal):
-    def __init__(self,name,species,age,sound,zoo_name,wing_span):
-        Animal.__init__(self,name,species,age,sound,zoo_name)
+    def __init__(self,name,species,age,sound,wing_span):
+
+        super().__init__(name,species,age,sound)
+
         self.wing_span=wing_span
+
     def make_sound(self):
-        return self.sound
+        return f"{self.name} sedash:{self.sound}"
+
+    def info(self):
+        return super().info()+(f"wing span :{self.wing_span}cm",)
 
         
 
 
-shir=Animal("shir","pestandar",20,"ghoresh","eram")
+shir=Animal("shir","pestandar",20,"ghoresh")
 
-print(shir.name,shir.species ,shir.age ,shir.sound, shir.zoo_name)
+print(shir)
 
 print(shir.make_sound())
 
 print(shir.info())
 
-print(shir)
+parrot=bird("tuti","parrot",1,"jik_jik",23)
+
+print(parrot)
+
+print(parrot.make_sound())
+
+print(parrot.info())
+
